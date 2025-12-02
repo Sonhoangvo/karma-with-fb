@@ -46,10 +46,17 @@ def extract_regions_from_json(filename='regions.json'):
         data = json.load(f)
 
     sentences = []
-    for center, objects in data.items():
-        object_types = [obj['objectType'] for obj in objects]
-        sentence = f'center {center} has {{{", ".join(object_types)}}}'
-        sentences.append(sentence)
+    for center_str, objects in data.items(): # Renamed 'center' to 'center_str' to avoid confusion
+        object_descriptions = []
+        for obj in objects:
+            pos = obj['position']
+            object_descriptions.append(
+                f"{obj['objectType']} at ({pos['x']:.2f}, {pos['y']:.2f}, {pos['z']:.2f})"
+            )
+        
+        if object_descriptions: # Only create a sentence if there are objects in the region
+            sentence = f'center {center_str} has {{{", ".join(object_descriptions)}}}'
+            sentences.append(sentence)
     
     return sentences
 

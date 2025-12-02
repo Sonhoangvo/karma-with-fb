@@ -6,7 +6,7 @@ import os # Import os module to handle file paths
 
 # Configuration for OpenAI API (assuming these are constant for the project)
 openai.api_base = "https://openrouter.ai/api/v1"
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Define paths relative to the project root
 SIMILARITY_FLAG_PATH = 'logs/similarity_flag.json'

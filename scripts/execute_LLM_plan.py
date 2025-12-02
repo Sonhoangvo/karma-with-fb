@@ -257,11 +257,16 @@ action_queue = []
 
 task_over = False
 
+
 def exec_actions():
-    # delete if current output already exist
-    cur_path = os.path.dirname(__file__) + "/*/"
-    for x in glob(cur_path, recursive = True):
-        shutil.rmtree (x)
+    # Explicitly delete generated image folders if they exist
+    agent_folder_path = os.path.join(os.path.dirname(__file__), "agent_1")
+    if os.path.exists(agent_folder_path):
+        shutil.rmtree(agent_folder_path, ignore_errors=True) # Use ignore_errors for robustness
+    
+    top_view_folder_path = os.path.join(os.path.dirname(__file__), "top_view")
+    if os.path.exists(top_view_folder_path):
+        shutil.rmtree(top_view_folder_path, ignore_errors=True) # Use ignore_errors for robustness
     
     # create new folders to save the images from the agents
     for i in range(no_robot):
@@ -275,6 +280,7 @@ def exec_actions():
     folder_path = os.path.dirname(__file__) + "/" + folder_name
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
+
     
     img_counter = 0
     #for short-term memory

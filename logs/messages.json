@@ -21,14 +21,10 @@
     },
     {
         "role": "user",
-        "content": "Apple is at position (-1.61, 0.96, -0.51)."
+        "content": "center (-0.92, 0.00, -1.29) has {Cabinet at (-1.18, 0.49, -2.20), Cabinet at (-1.55, 0.49, -1.96), Cabinet at (-1.69, 2.02, -2.46), Cabinet at (-0.73, 2.02, -2.46), CounterTop at (-1.87, 0.95, -1.21), Faucet at (-2.15, 0.91, -1.50), HousePlant at (-1.95, 0.89, -2.52), Sink at (-1.90, 0.96, -1.50), SinkBasin at (-1.91, 0.76, -1.49), StoveBurner at (-0.47, 0.92, -2.37), StoveBurner at (-0.47, 0.92, -2.58), StoveKnob at (-0.48, 0.88, -2.19), Window at (-2.23, 1.43, -1.20)}\ncenter (-0.92, 0.00, 0.12) has {Cabinet at (-1.55, 0.49, 0.38), Cabinet at (-1.85, 2.02, 0.38), CoffeeMachine at (-1.98, 0.90, -0.19), Drawer at (-1.56, 0.66, -0.20), Drawer at (-1.56, 0.84, 0.20), Drawer at (-1.56, 0.33, -0.20), Drawer at (-1.56, 0.84, -0.20), Toaster at (-1.84, 0.90, 0.13)}\ncenter (-0.92, 0.00, 1.54) has {Fridge at (-2.10, 0.00, 1.07), GarbageCan at (-1.93, -0.00, 2.03)}\ncenter (0.25, 0.00, -1.29) has {Cabinet at (0.68, 0.49, -2.20), Cabinet at (0.72, 2.02, -2.46), Cabinet at (0.68, 2.02, -2.46), CounterTop at (0.69, 0.95, -2.48), Microwave at (-0.24, 1.69, -2.53), StoveBurner at (-0.04, 0.92, -2.58), StoveBurner at (-0.04, 0.92, -2.37), StoveKnob at (-0.02, 0.88, -2.19), StoveKnob at (-0.33, 0.88, -2.19), StoveKnob at (-0.18, 0.88, -2.19)}\ncenter (0.25, 0.00, 0.12) has {CounterTop at (-0.08, 1.15, -0.00), Floor at (0.00, 0.00, 0.00), Stool at (0.70, 0.00, -0.51), Stool at (0.74, 0.00, 0.56)}\ncenter (1.42, 0.00, -1.29) has {Drawer at (0.95, 0.83, -2.20), Drawer at (0.95, 0.56, -2.20), Drawer at (0.95, 0.22, -2.20), Drawer at (0.95, 0.71, -2.20), Drawer at (0.95, 0.39, -2.20), Shelf at (1.75, 0.17, -2.56), Shelf at (1.75, 0.88, -2.56), Shelf at (1.75, 0.55, -2.56), ShelvingUnit at (1.75, 0.01, -2.56)}\ncenter (1.42, 0.00, 0.12) has {LightSwitch at (2.33, 1.31, -0.16)}\n"
     },
     {
         "role": "user",
-        "content": "center (-0.92, 0.00, -1.29) has {Cabinet, Cabinet, Cabinet, Cabinet, CounterTop, Faucet, HousePlant, Sink, SinkBasin, StoveBurner, StoveBurner, StoveKnob, Window}\ncenter (-0.92, 0.00, 0.12) has {Cabinet, Cabinet, CoffeeMachine, Drawer, Drawer, Drawer, Drawer, Toaster}\ncenter (-0.92, 0.00, 1.54) has {Fridge, GarbageCan}\ncenter (0.25, 0.00, -1.29) has {Cabinet, Cabinet, Cabinet, CounterTop, Microwave, StoveBurner, StoveBurner, StoveKnob, StoveKnob, StoveKnob}\ncenter (0.25, 0.00, 0.12) has {CounterTop, Floor, Stool, Stool}\ncenter (0.25, 0.00, 1.54) has {}\ncenter (1.42, 0.00, -1.29) has {Drawer, Drawer, Drawer, Drawer, Drawer, Shelf, Shelf, Shelf, ShelvingUnit}\ncenter (1.42, 0.00, 0.12) has {LightSwitch}\ncenter (1.42, 0.00, 1.54) has {}\n"
-    },
-    {
-        "role": "user",
-        "content": "Please help me decompose the following tasks: wash an apple. Please output only the generated code."
+        "content": "Please help me decompose the following tasks: turn off the light then turn on the light. Please output only the generated code."
     }
 ]

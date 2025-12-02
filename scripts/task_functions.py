@@ -3,13 +3,11 @@ from .execute_LLM_plan import GoToObject, ExploreObject, PickupObject, PutObject
 
 # @replace_explore_with_custom
 
-def wash_apple(robot):
-    # 0: SubTask 1: Wash the Apple
-    # 1: Go to the Apple (known position).
-    GoToObject(robot, 'Apple')
-    # 2: Pick up the Apple.
-    PickupObject(robot, 'Apple')
-    # 3: Go directly to the Sink (known position).
-    GoToObject(robot, 'Sink')
-    # 4: Wash the Apple in the Sink.
-    CleanObject(robot, 'Apple')
+def turn_off_light_then_turn_on_light(robot):
+    # 0: SubTask 1: Turn off the light
+    # 1: Go to the LightSwitch.
+    GoToObject(robot, 'LightSwitch')
+    # 2: Turn off the light.
+    SwitchOff(robot, 'LightSwitch')
+    # 3: Turn on the light immediately after.
+    SwitchOn(robot, 'LightSwitch')

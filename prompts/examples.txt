@@ -1,0 +1,111 @@
+Example 1 Decomposition:
+# Task Description: Throw the fork in the trash first, and then Wash the Fork in the sink.
+# GENERAL TASK DECOMPOSITION
+# Sequence subtasks:
+# SubTask 1: Throw the Fork in the trash. (Skills Required: Explore, PickupObject, ThrowObject)
+# Since the previous tasks involved throwing utensils into the trash, let's assume that the spatula might also be in the trash if it was thrown away. If the spatula's position changed due to previous tasks, we should consider the new location.
+# SubTask 2: Wash the Fork in the sink. (Skills Required: GoToObject, PickupObject)
+# We can execute SubTask 1 first and then SubTask 2.
+
+# CODE
+def throw_fork_in_trash_and_wash_fork_in_sink(robot):
+    # 0: SubTask 1: Throw the Fork in the trash
+    # 1: Explore the Fork.
+    available_positions = [
+        (1.25, 0, -1.75),
+        (-1.0, 0, 0),
+        (-0.25, 0, -1.5),
+        (-1.0, 0, -1.5),
+        (0.5, 0, 1.5),
+        (1.5, 0, -0.25),
+        (1.5, 0, 1.0),
+        (-2.0, 0, 2.0)
+    ]
+    Explore(robot,'Fork',available_positions)
+    # 2: Pick up the Fork.
+    PickupObject(robot,'Fork')
+    # 3: Explore the GarbageCan.
+    goto(robot,'GarbageCan')
+    # 4: Throw the Fork in the GarbageCan.
+    ThrowObject(robot,'Fork', 'GarbageCan')
+    # 5: SubTask 2: Wash the Fork in the sink
+    # 6: Go to the GarbageCan.
+    goto(robot,'Fork')
+    # 7: Pick up the Fork.
+    PickupObject(robot,'Fork')
+    # 8: Explore the Sink.
+    goto(robot,'Sink')
+    # 9: Wash the Fork in the Sink.
+    Clean(robot,'Fork')
+
+Example 2 Decomposition:
+# Wash fork in sink. (fork is in the countertop)
+# GENERAL TASK DECOMPOSITION
+# Independent subtasks:
+# SubTask 1: wash fork in sink. (Skills Required: GoToObject, SwitchOff)
+# We should perform subtask1 first.
+# CODE
+def wash_fork_in_sink(robot):
+    # 0: SubTask 1: wash fork in sink
+    # 1: go to the fork (because you know the position of fork, and fork is in the countertop).
+    goto(robot, 'Fork')
+    # 2: Pick up the fork.
+    PickupObject(robot, 'Fork')
+    # 4: Explore the Sink.
+    goto(robot, 'Sink')
+    # 5: wash the fork in the Sink.
+    Clean(robot, 'Fork')
+
+Example 3 Decomposition:
+# Task Description: Slice the Potato
+# GENERAL TASK DECOMPOSITION
+# Independent subtasks:
+# SubTask 1: Slice the Potato. (Skills Required: ExploreObject, PickupObject, SliceObject, PutObject)
+# We can execute SubTask 1 first.
+
+# CODE
+def slice_potato(robot):
+    # 0: SubTask 1: Slice the Potato
+    # 1: Explore the Knife.
+    available_positions = [
+        (1.25, 0, -1.75),
+        (-1.0, 0, 0),
+        (-0.25, 0, -1.5),
+        (-1.0, 0, -1.5),
+        (0.5, 0, 1.5),
+        (1.5, 0, -0.25),
+        (1.5, 0, 1.0),
+        (-2.0, 0, 2.0)
+    ]
+    Explore(robot,'Knife',available_positions)
+    # 2: Pick up the Knife.
+    PickupObject(robot,'Knife')
+    # 3: Explore the Potato.
+    available_positions = [
+        (1.25, 0, -1.75),
+        (-1.0, 0, 0),
+        (-0.25, 0, -1.5),
+        (-1.0, 0, -1.5),
+        (0.5, 0, 1.5),
+        (1.5, 0, -0.25),
+        (1.5, 0, 1.0),
+        (-2.0, 0, 2.0)
+    ]
+    Explore(robot,'Potato',available_positions)
+    # 4: Slice the Potato.
+    SliceObject(robot,'Potato')
+    # 5: Explore the countertop.
+    available_positions = [
+        (1.25, 0, -1.75),
+        (-1.0, 0, 0),
+        (-0.25, 0, -1.5),
+        (-1.0, 0, -1.5),
+        (0.5, 0, 1.5),
+        (1.5, 0, -0.25),
+        (1.5, 0, 1.0),
+        (-2.0, 0, 2.0)
+    ]
+    Explore(robot,'CounterTop',available_positions)
+    # 6: Put the Knife back on the CounterTop.
+    PutObject(robot,'Knife', 'CounterTop')
+

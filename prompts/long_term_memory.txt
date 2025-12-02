@@ -1,0 +1,9 @@
+center (-0.92, 0.00, -1.29) has {Cabinet, Cabinet, Cabinet, Cabinet, CounterTop, Faucet, HousePlant, Sink, SinkBasin, StoveBurner, StoveBurner, StoveKnob, Window}
+center (-0.92, 0.00, 0.12) has {Cabinet, Cabinet, CoffeeMachine, Drawer, Drawer, Drawer, Drawer, Toaster}
+center (-0.92, 0.00, 1.54) has {Fridge, GarbageCan}
+center (0.25, 0.00, -1.29) has {Cabinet, Cabinet, Cabinet, CounterTop, Microwave, StoveBurner, StoveBurner, StoveKnob, StoveKnob, StoveKnob}
+center (0.25, 0.00, 0.12) has {CounterTop, Floor, Stool, Stool}
+center (0.25, 0.00, 1.54) has {}
+center (1.42, 0.00, -1.29) has {Drawer, Drawer, Drawer, Drawer, Drawer, Shelf, Shelf, Shelf, ShelvingUnit}
+center (1.42, 0.00, 0.12) has {LightSwitch}
+center (1.42, 0.00, 1.54) has {}
